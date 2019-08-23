@@ -1,0 +1,13 @@
+<h1 class="header">Add a new cocktail</h1>
+
+<%= simple_form_for @cocktail do |f| %>
+  <div class="form-inputs">
+    <%= f.input :name, input_html: { autocomplete: 'off', autofocus: true } %>
+    <%= f.input :description, input_html: { autocomplete: 'off' } %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit class: 'btn btn-lg btn-primary' %> <span class="button-divider">|</span>
+    <%= link_to 'Cancel', cocktails_path, class: 'btn btn-lg btn-outline-secondary' %>
+  </div>
+<% end %>
